@@ -9,12 +9,14 @@ SpringBoot-Kotlin-Dynamic-Compiler
 ```shell script
 curl --location --request POST 'http://127.0.0.1:8080/exec' \
 --header 'Content-Type: text/plain' \
---data-raw 'package me.kagura.dynamiccompiler.script
+--data-raw '
+package me.kagura.dynamiccompiler.script
 import me.kagura.dynamiccompiler.script.Worker
 
 class KaguraWorker : Worker {
     override fun doWork(): String {
         return "https://www.kagura.me/"
     }
-}'
+}
+'
 ```
